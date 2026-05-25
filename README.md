@@ -1,2 +1,2 @@
 # Vaughn Chaudhuri  (TCS 2530 – C++ Programming Assignments)
-Repository for programming assignments relating to my personal hobby of 3D modeling and printing.
+Repository for programming assignments relating to my personal hobby of 3D modeling and printing. I mainly like to create plastic parts that are compatible with action figures.
