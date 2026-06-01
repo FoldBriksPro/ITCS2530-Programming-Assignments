@@ -141,6 +141,9 @@
   <ItemGroup>
     <ClCompile Include="W1 Assignment.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="List.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

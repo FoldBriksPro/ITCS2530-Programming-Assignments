@@ -1,21 +1,37 @@
 #include <iostream>
+#include <fstream>
+#include <string>
+
 using namespace std;
 
 int main()
 {
-	string objName = "nothing"; //init variables as generic values
-	double len = 0;
-	double wid = 0;
-	double hei = 0;
+	ofstream out;
+	
+	out.open("List.txt", ios::app); //append mode
 
-	cout << "What type of object would you like to 3D print?: "; //user to type object name
-	cin >> objName;
-	cout << "Enter length, width, then height (in mm): "; //user to type 3 numbers
-	cin >> len >> wid >> hei;
+	string pName; //init variables 
+	string base;
+	string status;
+	int colors = 0;
 
-	int time = (len * wid * hei) / 250; //very basic time calcuation based on the volume
+	cout << "Welcome to the project tracker-" << endl;
+	
+	cout << "Enter project name: "; //user to type project name (TODO: check for project with existing name)
+	getline(cin, pName); //getline allows spaces
+	
+	cout << "Enter name of base figure (or 'None'): "; //user to type object name
+	getline(cin, base);
+	
+	cout << "Enter details of current project status: "; //user to type project status
+	getline(cin, status);
+	
+	cout << "Enter # of colors required (0 if unknown): "; //user to type project status
+	cin >> colors;
 
-	cout << "It will take " << time << " minutes to print your " << objName << endl;
+	out << "Project: " << pName << ", Base: " << base << ", Status: " << status << ", Colors: " << colors << endl; //appending to file
+
+	out.close();
 
 	return 0;
 }
