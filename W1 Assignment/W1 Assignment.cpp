@@ -8,9 +8,10 @@ using namespace std;
 int main()
 {
 	ofstream out;
-	bool on = true; //script will run while set to true
-
-	cout << "Welcome to the project tracker-" << endl;
+	bool on = true; //script will loop while set to true
+	cout << "-------------------------------" << endl;
+	cout << "[Welcome to the project tracker]" << endl;
+	cout << "-------------------------------" << endl;
 
 while (on == true)
 {
@@ -63,7 +64,7 @@ while (on == true)
 	cin >> next;
 	if (next != "yes")
 		{
-		on = false; //script will stop running
+		on = false; //loop will stop running
 		}
 	else
 		{
