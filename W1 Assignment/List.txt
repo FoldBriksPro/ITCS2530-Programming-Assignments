@@ -1,2 +1,2 @@
-Project: Powermaster Armor, Base: Siege/Earthrise Optimus Prime, Status: Completed, Colors: 5
-Project: Star Convoy, Base: VNR Optimus Prime, Status: 3D model, Colors: 6
+Powermaster Armor, Base: Siege/Earthrise Optimus Prime, Status: Completed, Colors: 5
+Star Convoy, Base: VNR Optimus Prime, Status: 3D model, Colors: 6
