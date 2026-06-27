@@ -10,7 +10,6 @@ int color(int clr) ///change console color to id
 {
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleTextAttribute(hConsole, clr);
-		cout << " I want to be nice today!" << endl;
 	return 0;
 }
 
@@ -30,6 +29,7 @@ int main()
 	cout << "-------------------------------" << endl;
 	cout << "[Welcome to the project tracker]" << endl;
 	cout << "-------------------------------" << endl;
+	color(15);
 
 while (on == true)
 {
