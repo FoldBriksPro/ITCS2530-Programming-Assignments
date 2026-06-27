@@ -2,13 +2,31 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <windows.h>
 
 using namespace std;
+
+int color(int clr) ///change console color to id
+{
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleTextAttribute(hConsole, clr);
+		cout << " I want to be nice today!" << endl;
+	return 0;
+}
+
+string getInput(string msg)
+{
+	string outp;
+	cout << msg << ": "; //display set message
+	getline(cin, outp); //getline allows spaces
+	return outp;
+}
 
 int main()
 {
 	ofstream out;
 	bool on = true; //script will loop while set to true
+	color(11);
 	cout << "-------------------------------" << endl;
 	cout << "[Welcome to the project tracker]" << endl;
 	cout << "-------------------------------" << endl;
@@ -27,19 +45,15 @@ while (on == true)
 	string pName; //init variables 
 	string base;
 	string status;
-	int colors = 0;
+	string colors = "0";
 
-	cout << "Enter project name (Existing or new): "; //user to type project name 
-	getline(cin, pName); //getline allows spaces
+	pName = getInput("Enter project name (Existing or new)"); //user to type project name 
 	
-	cout << "Enter name of base figure (or 'None'): "; //user to type object name
-	getline(cin, base);
+	base = getInput("Enter name of base figure (or 'None')"); //user to type object name
 
-	cout << "Enter details of current project status: "; //user to type project status
-	getline(cin, status);
+	status = getInput("Enter details of current project status"); //user to type project status
 
-	cout << "Enter # of colors required (0 if unknown): "; //user to type project status
-	cin >> colors;
+	colors = getInput("Enter # of colors required (0 if unknown)"); //user to type project status
 
 	out.open("List.txt");
 	out << endl; //clear file
