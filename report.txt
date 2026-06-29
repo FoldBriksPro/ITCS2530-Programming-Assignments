@@ -1,0 +1,24 @@
+=============================================
+     3D PRINT PROJECT TRACKER - REPORT      
+=============================================
+
+Project             Hrs         Filament(kg)  Colors  Difficulty    
+--------------------------------------------------------------------
+Benchy Boat         1.50        0.025         2       Beginner      
+--------------------------------------------------------------------
+TOTALS              1.50        0.025         
+
+  Avg print time per project : 1.50 hrs
+
+--- Daily Print-Time Log ---
+  Day 1  : 2.50 hrs
+  Day 2  : 3.00 hrs
+  Day 3  : 3.50 hrs
+  Day 4  : 2.00 hrs
+  Day 5  : 3.00 hrs
+  Day 6  : 4.50 hrs
+  Day 7  : 3.50 hrs
+
+  Average : 3.14 hrs/day
+  Highest : 4.50 hrs
+  Lowest  : 2.00 hrs
