@@ -60,6 +60,7 @@ void        saveReport(const PrintProject projects[],
                        int count,
                        const double hoursArr[], int arrSize);
 void        showAllProjects(const PrintProject projects[], int count);
+int         findMostFilamentUsed(const PrintProject projects[], int count);
 
 //  setColor  – change Windows console text color
 void setColor(int colorCode)
@@ -334,6 +335,24 @@ void showAllProjects(const PrintProject projects[], int count)
     }
 }
 
+//  findMostFilamentUsed  – processes array of structs,
+//  returns index of the project that used the most filament
+int findMostFilamentUsed(const PrintProject projects[], int count)
+{
+    int maxIndex = 0;
+
+    // for loop: fixed number of iterations through the struct array
+    for (int i = 1; i < count; i++)
+    {
+        if (projects[i].filamentKg > projects[maxIndex].filamentKg)
+        {
+            maxIndex = i;
+        }
+    }
+
+    return maxIndex;
+}
+
 //  displaySummaryTable  – formatted table to console
 void displaySummaryTable(const PrintProject projects[],
                          int count,
@@ -406,6 +425,12 @@ void displaySummaryTable(const PrintProject projects[],
     setColor(14);
     cout << "\n  Avg print time per project : "
          << fixed << setprecision(2) << avgHours << " hrs" << endl;
+         // struct array processing: show project with most filament used
+    int topIndex = findMostFilamentUsed(projects, count);
+    cout << "  Most filament used          : "
+         << projects[topIndex].name << " ("
+         << fixed << setprecision(3) << projects[topIndex].filamentKg
+         << " kg)" << endl;
 
     // daily log stats (array)
     if (arrSize > 0)
