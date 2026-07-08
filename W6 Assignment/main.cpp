@@ -1,4 +1,4 @@
-// ITCS 2530 - Week 06 Programming Assignment
+// ITCS 2530 - Week 07 Programming Assignment
 // 3D Print Project Tracker
 // Contributor: Farris Qureshi (working on Vaughn Chaudhuri's repo)
 //
@@ -14,6 +14,7 @@
 #include <windows.h>
 
 using namespace std;
+// Week 07 submission - Farris Qureshi 1
 
 // ── Constants ───────────────────────────────────────────────
 const int MAX_PROJECTS = 10;          // max projects in session
@@ -60,6 +61,7 @@ void        saveReport(const PrintProject projects[],
                        int count,
                        const double hoursArr[], int arrSize);
 void        showAllProjects(const PrintProject projects[], int count);
+int         findMostFilamentUsed(const PrintProject projects[], int count);
 
 //  setColor  – change Windows console text color
 void setColor(int colorCode)
@@ -74,7 +76,7 @@ void displayBanner()
     setColor(11); // bright cyan
     cout << "=============================================" << endl;
     cout << "     3D PRINT PROJECT TRACKER  v2.0         " << endl;
-    cout << "      ITCS 2530 - Week 06 Assignment        " << endl;
+    cout << "      ITCS 2530 - Week 07 Assignment        " << endl;
     cout << "=============================================" << endl;
     setColor(15); // white
     cout << "  Track your prints, filament, and time!    " << endl;
@@ -334,6 +336,24 @@ void showAllProjects(const PrintProject projects[], int count)
     }
 }
 
+//  findMostFilamentUsed  – processes array of structs,
+//  returns index of the project that used the most filament
+int findMostFilamentUsed(const PrintProject projects[], int count)
+{
+    int maxIndex = 0;
+
+    // for loop: fixed number of iterations through the struct array
+    for (int i = 1; i < count; i++)
+    {
+        if (projects[i].filamentKg > projects[maxIndex].filamentKg)
+        {
+            maxIndex = i;
+        }
+    }
+
+    return maxIndex;
+}
+
 //  displaySummaryTable  – formatted table to console
 void displaySummaryTable(const PrintProject projects[],
                          int count,
@@ -406,6 +426,12 @@ void displaySummaryTable(const PrintProject projects[],
     setColor(14);
     cout << "\n  Avg print time per project : "
          << fixed << setprecision(2) << avgHours << " hrs" << endl;
+         // struct array processing: show project with most filament used
+    int topIndex = findMostFilamentUsed(projects, count);
+    cout << "  Most filament used          : "
+         << projects[topIndex].name << " ("
+         << fixed << setprecision(3) << projects[topIndex].filamentKg
+         << " kg)" << endl;
 
     // daily log stats (array)
     if (arrSize > 0)
