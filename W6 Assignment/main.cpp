@@ -1,4 +1,4 @@
-// ITCS 2530 - Week 06 Programming Assignment
+// ITCS 2530 - Week 07 Programming Assignment
 // 3D Print Project Tracker
 // Contributor: Farris Qureshi (working on Vaughn Chaudhuri's repo)
 //
@@ -75,7 +75,7 @@ void displayBanner()
     setColor(11); // bright cyan
     cout << "=============================================" << endl;
     cout << "     3D PRINT PROJECT TRACKER  v2.0         " << endl;
-    cout << "      ITCS 2530 - Week 06 Assignment        " << endl;
+    cout << "      ITCS 2530 - Week 07 Assignment        " << endl;
     cout << "=============================================" << endl;
     setColor(15); // white
     cout << "  Track your prints, filament, and time!    " << endl;
