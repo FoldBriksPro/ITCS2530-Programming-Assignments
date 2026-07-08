@@ -14,6 +14,7 @@
 #include <windows.h>
 
 using namespace std;
+// Week 07 submission - Farris Qureshi 1
 
 // ── Constants ───────────────────────────────────────────────
 const int MAX_PROJECTS = 10;          // max projects in session
