@@ -1,0 +1,24 @@
+=============================================
+     3D PRINT PROJECT TRACKER - REPORT      
+=============================================
+
+Project             Hrs         Filament(kg)  Colors  Difficulty    
+--------------------------------------------------------------------
+Keyboard Project    3.70        1.100         5       Intermediate  
+--------------------------------------------------------------------
+TOTALS              3.70        1.100         
+
+  Avg print time per project : 3.70 hrs
+
+--- Daily Print-Time Log ---
+  Day 1  : 3.00 hrs
+  Day 2  : 2.00 hrs
+  Day 3  : 5.00 hrs
+  Day 4  : 7.00 hrs
+  Day 5  : 3.40 hrs
+  Day 6  : 1.60 hrs
+  Day 7  : 7.40 hrs
+
+  Average : 4.20 hrs/day
+  Highest : 7.40 hrs
+  Lowest  : 1.60 hrs
